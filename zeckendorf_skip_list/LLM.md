@@ -168,14 +168,11 @@ BenchmarkPatterns/SlidingRange_BTree-8                              9190        
 
 * **Zeckendorf’s Theorem**: Every positive integer `n` can be written *uniquely* as a sum of non-consecutive Fibonacci numbers:
 
-  $$
-    n = F_{i_1} + F_{i_2} + \cdots + F_{i_k},\quad |i_j - i_{j+1}|\ge2.
-  $$
+  $n = F_{i_1} + F_{i_2} + \cdots + F_{i_k},\quad |i_j - i_{j+1}|\ge2$
+
 * **Mapping to Skip Levels**: For an element with *rank* `r` in the sorted sequence, compute its Zeckendorf representation
 
-  $$
-    r = \sum_{j=1}^k F_{i_j}.
-  $$
+  $r = \sum_{j=1}^k F_{i_j}$
 
   Then, for each Fibonacci term `F_{i_j}`, we give this element a **skip-pointer** of *level* `i_j`, connecting it to the next element whose rank exceeds `r + F_{i_j}`.
 
@@ -214,16 +211,12 @@ BenchmarkPatterns/SlidingRange_BTree-8                              9190        
 * **Lemma (Zeckendorf Term Bound)**
   For any `n`, the number of Fibonacci terms in its Zeckendorf representation is
 
-  $$
-    k(n)\;\le\;\log_\phi\bigl(n\sqrt5\bigr)\;,
-    \quad\text{where } \phi=\tfrac{1+\sqrt5}2.
-  $$
+  $k(n)\;\le\;\log_\phi\bigl(n\sqrt5\bigr)\;,
+    \quad\text{where } \phi=\tfrac{1+\sqrt5}2$
 
   Since each term yields at most one skip-pointer level, all operations take
 
-  $$
-    O\bigl(k(n)\bigr)\;=\;O(\log n)
-  $$
+  $O\bigl(k(n)\bigr)\;=\;O(\log n)$
 
   worst-case, with small constants.
 
