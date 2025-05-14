@@ -14,6 +14,7 @@ This repository is a collaborative research space where I work with various Larg
 5. **Collaborative Iteration**: When I find issues with the theoretical basis during implementation, I discuss it with multiple LLMs to try to find ways to fix or mitigate flaws
 6. **Collaborative Implementation**: Finally, we write a Go implementation. This stage focuses on:
    - Performance benchmarking
+7. (Rarely) **Collaborative Tuning**: If I'm convinced that substantial performance gains can be realized by moving some portion of the logic to Rust, we do that using CGO.
 
 ## Notes
 
@@ -40,14 +41,15 @@ Failed ideas are included in this repository as a reference for how and why thin
 
 ## Projects
 
-| Name | Description | Viable | Meets Guarantees? | Python | Go  |
-| ---- | ----------- | ------ | ------ | --- | --- |
-| VT Syndrome Prefilter | Use Varshamov-Tenengolts syndromes as keys for efficient fuzzy matching. | ✅ | ✅ | ✅ | ✅ |
-| Zeckendorf Skip List |  | ✅ | ✅ | ✅ | ✅ |
-| Gyre String Index | Use contiguous bit-runs to speed string search. | ❌ | ❌ | ✅ | ❌ |
-| Harmonic Ladder | Use harmonic decomposition to achieve constant-time insertion, retrieval, and deletion, with perfect order preservation and zero collisions or rebalancing.| ❌ | ❌ | ❌ | ❌ |
-| Harmonic Ladder / Quadratic-Residue Egyptian Decomposer | Egyptian fraction decomposition algorithm | ❌ | ❌ | ✅ | ❌ |
-| SparseHash Wheel |  | ❌ | ❌ | ✅ | ❌ |
+| Name | Description | Viable | Meets Guarantees? | Python | Go | Rust |
+| ---- | ----------- | ------ | ------ | --- | --- | --- |
+| Constellation Search | Use two anchors for indexing exact string search | ✅ | ✅ | ✅ | ✅ | ✅ |
+| VT Syndrome Prefilter | Use Varshamov-Tenengolts syndromes as keys for efficient fuzzy matching. | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Zeckendorf Skip List |  | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Gyre String Index | Use contiguous bit-runs to speed string search. | ❌ | ❌ | ✅ | ❌ | ❌ |
+| Harmonic Ladder | Use harmonic decomposition to achieve constant-time insertion, retrieval, and deletion, with perfect order preservation and zero collisions or rebalancing.| ❌ | ❌ | ❌ | ❌ | ❌ |
+| Harmonic Ladder / Quadratic-Residue Egyptian Decomposer | Egyptian fraction decomposition algorithm | ❌ | ❌ | ✅ | ❌ | ❌ |
+| SparseHash Wheel |  | ❌ | ❌ | ✅ | ❌ | ❌ |
 
 ## Process
 
