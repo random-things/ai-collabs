@@ -2,6 +2,10 @@
 
 This repository is a collaborative research space where I work with various Large Language Models (LLMs) to explore novel algorithms and data structures.
 
+## 2025-05-17 News
+
+Funnily enough, a few days after I published this repository, Google went public with [AlphaEvolve](https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/), which is an even more automated way of developing algorithms and data structures. Apparently they've been doing it for around a year and keeping the results in-house. There's marginally less incentive for me to keep working on this repository when enormous companies like Google can throw their weight behind solutions that are end-to-end automated, so I'll be devoting less time to this in the future.
+
 ## How It Works
 
 1. **LLM Proposals**: LLMs suggest novel algorithms, data structures, or optimizations for specific problems
@@ -44,6 +48,7 @@ Failed ideas are included in this repository as a reference for how and why thin
 | Name | Description | Viable | Meets Guarantees? | Python | Go | Rust |
 | ---- | ----------- | ------ | ------ | --- | --- | --- |
 | Constellation Search | Use two anchors for indexing exact string search | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 𝚽‑Tree | Use Zeckendorf encoding to create a self-balancing tree | ✅ | ❌ | ✅ | ✅ | ❌ |
 | VT Syndrome Prefilter | Use Varshamov-Tenengolts syndromes as keys for efficient fuzzy matching. | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Zeckendorf Skip List |  | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Gyre String Index | Use contiguous bit-runs to speed string search. | ❌ | ❌ | ✅ | ❌ | ❌ |
